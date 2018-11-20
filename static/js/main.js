@@ -34,6 +34,15 @@
             draw(X, Y);
         }
     }, false);
+    canvas.addEventListener('touchmove', (e) => {
+        if (e.touches.length == 1) {
+            e.preventDefault();
+            let pos = getPosT(e);
+            draw(pos.x, pos.y);
+        }
+
+    }, false);
+
 
     canvas.addEventListener('mousedown', (e) => {
         redoStack = [];
@@ -49,9 +58,37 @@
             draw(X, Y);
         }
     }, false);
+    canvas.addEventListener('touchstart', (e) => {
+        if (e.touches.length == 1) {
+            e.preventDefault();
+            let pos = getPosT(e);
+            draw(pos.x, pos.y);
+        }
+    }, false);
+
 
     canvas.addEventListener('mouseup', drawEnd, false);
     canvas.addEventListener('mouseout', drawEnd, false);
+    canvas.addEventListener('touchend', drawEnd, false);
+
+    function scrollX() {
+        return document.documentElement.scrollLeft || document.body.scrollLeft;
+    }
+
+    function scrollY() {
+        return document.documentElement.scrollTop || document.body.scrollTop;
+    }
+
+    function getPosT(e) {
+        var mX = e.touches[0].clientX - e.target.getBoundingClientRect().left +
+            scrollX();
+        var mY =
+            e.touches[0].clientY - e.target.getBoundingClientRect().top + scrollY();
+        return {
+            x: mX,
+            y: mY
+        };
+    }
 
     function drawEnd(e) {
         mouseX = '';
