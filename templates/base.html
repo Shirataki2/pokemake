@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="./static/js/snackbar.min.js"></script>
+    <link rel="stylesheet" href="./static/css/snackbar.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./static/css/style.css">
+    <title>Pokemake</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <nav class="navbar bg-light logomark navbar-expand-sm">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav4" aria-controls="navbarNav4"
+                aria-expanded="false" aria-label="ToggleNavigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="/">
+                <div class="navbar-brand">
+                    Pokemake
+                </div>
+            </a>
+            <div class="collapse navbar-collapse active justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="http://instasan.kcs18.net" class="nav-link">Instasan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://github.com/Shirataki2/pokemake" class="nav-link">Fork Me!<i class="fab fa-github"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Content -->
+        {% block body %}
+        {% endblock %}
+    </div>
+
+</body>
+
+</html>
