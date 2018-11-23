@@ -1,82 +1,82 @@
 /* Custom Margin */
 
 @media (min-width: 768px) {
-    .pt-lg-21 {
-        padding-top: 7rem !important;
-    }
+  .pt-lg-21 {
+    padding-top: 7rem !important;
+  }
 
-    .pt-lg-12 {
-        padding-top: 4rem !important;
-    }
+  .pt-lg-12 {
+    padding-top: 4rem !important;
+  }
 
-    .pb-lg-12 {
-        padding-bottom: 4rem !important;
-    }
+  .pb-lg-12 {
+    padding-bottom: 4rem !important;
+  }
 }
 
 /* Background Style */
 .dict-grid {
-    background-color: #fffff7;
-    border-radius: 30px;
-    border: 3px tan solid;
-    box-shadow: 4px 4px 4px rgb(214, 214, 214);
+  background-color: #fffff7;
+  border-radius: 30px;
+  border: 3px tan solid;
+  box-shadow: 4px 4px 4px rgb(214, 214, 214);
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 /* Canvas */
 canvas {
-    box-shadow: 0px 0px 5px gray;
+  box-shadow: 0px 0px 5px gray;
 }
 
 .menu {
-    border-radius: 20px;
-    height: 32px;
+  border-radius: 20px;
+  height: 32px;
 }
 
 .tool,
 .tool>* {
-    border-radius: 20px;
-    height: 32px;
-    color: black;
+  border-radius: 20px;
+  height: 32px;
+  color: black;
 }
 
 .fas {
-    position: relative;
-    font-size: 25px;
-    left: -12px;
+  position: relative;
+  font-size: 25px;
+  left: -12px;
 }
 
 .ff {
-    position: relative;
-    left: -12px !important;
+  position: relative;
+  left: -12px !important;
 }
 
 /* Oridinal Font */
 
 @font-face {
-    font-family: 'Pixel-Mplus';
-    src: url('PixelMplus12-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Pixel-Mplus';
+  src: url('PixelMplus12-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
-    font-family: 'Pixel-Mplus', sans-serif;
+  font-family: 'Pixel-Mplus', sans-serif;
 }
 
 * {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 h1 {
-    font-size: 72px;
+  font-size: 72px;
 }
 
 div {
-    font-size: 24px !important;
+  font-size: 24px !important;
 }
 
 a,
@@ -85,11 +85,27 @@ a:visited,
 a:active,
 a:link,
 a>* {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 
 /* Button */
 .btn {
-    width: 100%;
+  width: 100%;
+}
+
+.col-active {
+  transition: all 180ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transform: scale(.8);
+  border: #fff 4px;
+}
+
+.tool-active>* {
+  color: #000;
+  transition: all 250ms cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.tool-inactive>* {
+  color: #999;
+  transition: all 250ms cubic-bezier(0.215, 0.610, 0.355, 1);
 }

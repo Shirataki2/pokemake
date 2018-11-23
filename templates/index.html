@@ -2,117 +2,117 @@
 
 {% block body %}
 <div class="row">
-    <div class="col-xs-12 offset-lg-1 col-lg-10 pt-0 pt-lg-12">
-        <div class="row dict-grid">
-            <div class="col-xs-12 col-lg-6">
-                <div class="row">
-                    <div class="col-xs-12 pt-0 pb-3 pt-lg-6 pb-lg-3 offset-xs-0 offset-lg-1 col-lg-10 justify-content-center center">
-                        <!--Tool Bar-->
-                        <div class="row pt-3">
-                            <div class="menu col-1" id="#000000" style="background-color:#000000;">
-                            </div>
-                            <div class="menu col-1" id="#e60012" style="background-color:#e60012;">
-                            </div>
-                            <div class="menu col-1" id="#f39800" style="background-color:#f39800;">
-                            </div>
-                            <div class="menu col-1" id="#fff100" style="background-color:#fff100;">
-                            </div>
-                            <div class="menu col-1" id="#8fc31f" style="background-color:#8fc31f;">
-                            </div>
-                            <div class="menu col-1" id="#009944" style="background-color:#009944;">
-                            </div>
-                            <div class="menu col-1" id="#009e96" style="background-color:#009e96;">
-                            </div>
-                            <div class="menu col-1" id="#00a0e9" style="background-color:#00a0e9;">
-                            </div>
-                            <div class="menu col-1" id="#0068b7" style="background-color:#0068b7;">
-                            </div>
-                            <div class="menu col-1" id="#1d2088" style="background-color:#1d2088;">
-                            </div>
-                            <div class="menu col-1" id="#920783" style="background-color:#920783;">
-                            </div>
-                            <div class="menu col-1" id="#e4007f" style="background-color:#e4007f;">
-                            </div>
-                            <div class="tool col-1 t-draw">
-                                <i class="fas fa-pen t-draw"></i>
-                            </div>
-                            <div class="tool col-1 t-erase">
-                                <i class="fas fa-eraser t-erase"></i>
-                            </div>
-                            <div class="tool col-1 t-delete">
-                                <i class="fas fa-bomb t-delete"></i>
-                            </div>
-                            <div class="tool col-1 width-3">
-                                <p class="ff width-3" style=" left:-2px!important;">2</p>
-                            </div>
-                            <div class="tool col-1 width-7">
-                                <p class="ff width-7" style=" left:-2px!important;">7</p>
-                            </div>
-                            <div class="tool col-1 width-15">
-                                <p class="ff width-15">15</p>
-                            </div>
-                            <div class="tool col-1 width-25">
-                                <p class="ff width-25">25</p>
-                            </div>
-                            <div class="tool col-1 width-50">
-                                <p class="ff width-50">50</p>
-                            </div>
-                            <div class="tool col-1 width-99">
-                                <p class="ff width-99">99</p>
-                            </div>
-                            <div class="tool col-1 p-undo">
-                                <i class="fas fa-undo p-undo"></i>
-                            </div>
-                            <div class="tool col-1 p-redo">
-                                <i class="fas fa-redo p-redo"></i>
-                            </div>
-                            <label for="f" class="col-1" style="left:6px;">
-                                <div class="tool u-upload">
-                                    <i class="fas fa-file-upload"></i>
-                                </div>
-                                <form action="post" enctype="multipart/form-data">
-                                    <input type="file" name="upload_file" style="display:none;" id="f" accept="image/*">
-                                </form>
-                            </label>
-                        </div>
-                        <!--Tool Bar End-->
-                        <canvas id="canvas" width="360" height="360" class="center mt-2"></canvas>
-                        <div class="row">
-                            <div class="col-6 offset-3">
-                                <button class="btn btn-primary" id="predict-btn">
-                                    判定!
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+  <div class="col-xs-12 offset-lg-1 col-lg-10 pt-0 pt-lg-12">
+    <div class="row dict-grid">
+      <div class="col-xs-12 col-lg-6">
+        <div class="row">
+          <div class="col-xs-12 pt-0 pb-3 pt-lg-6 pb-lg-3 offset-xs-0 offset-lg-1 col-lg-10 justify-content-center center">
+            <!--Tool Bar-->
+            <div class="row pt-3">
+              <div class="menu col-1 col-active" id="000000" style="background-color:#000000;">
+              </div>
+              <div class="menu col-1" id="e60012" style="background-color:#e60012;">
+              </div>
+              <div class="menu col-1" id="f39800" style="background-color:#f39800;">
+              </div>
+              <div class="menu col-1" id="fff100" style="background-color:#fff100;">
+              </div>
+              <div class="menu col-1" id="8fc31f" style="background-color:#8fc31f;">
+              </div>
+              <div class="menu col-1" id="009944" style="background-color:#009944;">
+              </div>
+              <div class="menu col-1" id="009e96" style="background-color:#009e96;">
+              </div>
+              <div class="menu col-1" id="00a0e9" style="background-color:#00a0e9;">
+              </div>
+              <div class="menu col-1" id="0068b7" style="background-color:#0068b7;">
+              </div>
+              <div class="menu col-1" id="1d2088" style="background-color:#1d2088;">
+              </div>
+              <div class="menu col-1" id="920783" style="background-color:#920783;">
+              </div>
+              <div class="menu col-1" id="e4007f" style="background-color:#e4007f;">
+              </div>
+              <div class="tool col-1 t-draw tool-active">
+                <i class="fas fa-pen t-draw"></i>
+              </div>
+              <div class="tool col-1 t-erase tool-inactive">
+                <i class="fas fa-eraser t-erase"></i>
+              </div>
+              <div class="tool col-1 t-delete">
+                <i class="fas fa-bomb t-delete"></i>
+              </div>
+              <div class="tool w col-1 width-2 tool-inactive">
+                <p class="ff width-2" style=" left:-2px!important;">2</p>
+              </div>
+              <div class="tool w col-1 width-7 tool-active">
+                <p class="ff width-7" style=" left:-2px!important;">7</p>
+              </div>
+              <div class="tool w col-1 width-15 tool-inactive">
+                <p class="ff width-15">15</p>
+              </div>
+              <div class="tool w col-1 width-25 tool-inactive">
+                <p class="ff width-25">25</p>
+              </div>
+              <div class="tool w col-1 width-50 tool-inactive">
+                <p class="ff width-50">50</p>
+              </div>
+              <div class="tool w col-1 width-99 tool-inactive">
+                <p class="ff width-99">99</p>
+              </div>
+              <div class="tool col-1 p-undo">
+                <i class="fas fa-undo p-undo"></i>
+              </div>
+              <div class="tool col-1 p-redo">
+                <i class="fas fa-redo p-redo"></i>
+              </div>
+              <label for="f" class="col-1" style="left:6px;">
+                <div class="tool u-upload">
+                  <i class="fas fa-file-upload"></i>
                 </div>
+                <form action="post" enctype="multipart/form-data">
+                  <input type="file" name="upload_file" style="display:none;" id="f" accept="image/*">
+                </form>
+              </label>
             </div>
-            <div class="col-xs-12 col-lg-6">
-                <h1 class="pt-0 pt-lg-12" id="name">なまえ</h1>
-                <hr>
-                <div class="row">
-                    <div class="col-6 center">
-                        <p id="type-1">タイプ</p>
-                    </div>
-                    <div class="col-6 center">
-                        <p id="type-2">タイプ</p>
-                    </div>
-                    <div class="col-4 center">HP</div>
-                    <div class="col-4 center">こうげき</div>
-                    <div class="col-4 center">ぼうぎょ</div>
-                    <div class="col-4 center" id="H">0</div>
-                    <div class="col-4 center" id="A">0</div>
-                    <div class="col-4 center" id="B">0</div>
-                    <div class="col-4 center">とくこう</div>
-                    <div class="col-4 center">とくぼう</div>
-                    <div class="col-4 center">すばやさ</div>
-                    <div class="col-4 center" id="C">0</div>
-                    <div class="col-4 center" id="D">0</div>
-                    <div class="col-4 center" id="S">0</div>
-                </div>
+            <!--Tool Bar End-->
+            <canvas id="canvas" width="360" height="360" class="center mt-2"></canvas>
+            <div class="row">
+              <div class="col-6 offset-3">
+                <button class="btn btn-primary" id="predict-btn">
+                  判定!
+                </button>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+      <div class="col-xs-12 col-lg-6">
+        <h1 class="pt-0 pt-lg-12" id="name">なまえ</h1>
+        <hr>
+        <div class="row">
+          <div class="col-6 center">
+            <p id="type-1">タイプ</p>
+          </div>
+          <div class="col-6 center">
+            <p id="type-2">タイプ</p>
+          </div>
+          <div class="col-4 center">HP</div>
+          <div class="col-4 center">こうげき</div>
+          <div class="col-4 center">ぼうぎょ</div>
+          <div class="col-4 center" id="H">0</div>
+          <div class="col-4 center" id="A">0</div>
+          <div class="col-4 center" id="B">0</div>
+          <div class="col-4 center">とくこう</div>
+          <div class="col-4 center">とくぼう</div>
+          <div class="col-4 center">すばやさ</div>
+          <div class="col-4 center" id="C">0</div>
+          <div class="col-4 center" id="D">0</div>
+          <div class="col-4 center" id="S">0</div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 <script src="static/js/main.js"></script>
 
