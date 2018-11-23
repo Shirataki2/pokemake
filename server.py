@@ -1,4 +1,5 @@
-import sys
+import sys, codecs
+sys.stdout = codecs.getwriter("utf-8")(sys.stdout)
 import os
 import tensorflow as tf
 import numpy as np
