@@ -170,8 +170,7 @@ def run():
         b64_str = data.split(',')[1]
         img = Image.open(BytesIO(a2b_base64(b64_str))).convert('RGB')
         img = img.resize((100, 100))
-        img = np.expand_dims(np.asarray(img), axis=0)
-        img /= 255.
+        img = np.expand_dims(np.asarray(img), axis=0) / 255.
         with graph.as_default():
             pred_name = model_name.predict(img)
             pred_types = model_type.predict(img).argmax(axis=1).reshape((-1))
