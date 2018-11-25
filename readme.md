@@ -14,7 +14,7 @@
 
 CSSはBootstrapを使用しています。
 
-~http://pokemake.kcs18.net ~ はGCP上のサービスである[Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/)(GKE)を使っています。
+~http://pokemake.kcs18.net~ はGCP上のサービスである[Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/)(GKE)を使っています。
 
 masterブランチにプッシュすると[Google Cloud Build](https://cloud.google.com/cloud-build/)がDockerfileを基にビルドを行います。そのイメージをGKEに適用することでサービスをデプロイしています。疑似CIもどきです。
 
